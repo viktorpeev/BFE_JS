@@ -15,3 +15,15 @@ curriedJoin(1, 2, 3) // '1_2_3'
 curriedJoin(1)(2, 3) // '1_2_3'
 
 curriedJoin(1, 2)(3) // '1_2_3'
+
+
+Notes:
+Reminder what currying is:
+function sum(a) {
+    return (b) => {
+        return (c) => {
+            return a + b + c
+        }
+    }
+}
+console.log(sum(1)(2)(3)) // 6
